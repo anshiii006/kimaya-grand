@@ -440,32 +440,39 @@ INQUIRY
 
 </div> <!-- inquiry-info close -->
 
-<form class="inquiry-form">
+<form class="inquiry-form"
+      action="https://formsubmit.co/kimayagrand@gmail.com"
+      method="POST">
 
-            <input type="text" placeholder="Full Name" required>
+    <input type="hidden" name="_subject" value="New Kimaya Grand Inquiry">
+    <input type="hidden" name="_captcha" value="true">
 
-            <input type="email" placeholder="Email Address" required>
+    <input type="text" name="name" placeholder="Full Name" required>
 
-            <input type="tel" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
 
-            <select required>
-                <option>Select Event Type</option>
-                <option>Wedding</option>
-                <option>Reception</option>
-                <option>Birthday</option>
-                <option>Corporate Event</option>
-                <option>Anniversary</option>
-            </select>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
 
-            <input type="date" required>
+    <select name="event_type" required>
+        <option value="">Select Event Type</option>
+        <option>Wedding</option>
+        <option>Reception</option>
+        <option>Birthday</option>
+        <option>Corporate Event</option>
+        <option>Anniversary</option>
+    </select>
 
-            <input type="number" placeholder="Expected Guests">
+    <input type="date" name="event_date" required>
 
-            <textarea rows="5" placeholder="Tell us about your event..."></textarea>
+    <input type="number" name="expected_guests"
+           placeholder="Expected Guests">
 
-            <button type="submit">Send Inquiry</button>
+    <textarea name="message" rows="5"
+              placeholder="Tell us about your event..."></textarea>
 
-        </form>
+    <button type="submit">Send Inquiry</button>
+</form>
+
 
     </div>
 
